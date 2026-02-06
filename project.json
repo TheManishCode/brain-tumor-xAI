@@ -1,0 +1,31 @@
+{
+  "title": "TumorVision — Brain Tumor xAI",
+  "description": "A full-stack, explainable AI platform for brain tumor MRI classification. Combines PyTorch deep learning, Grad-CAM explainability, and a modern React frontend. Local-first, privacy-focused, and designed for clinical transparency.",
+  "categories": [
+    "creations",
+    "featured"
+  ],
+  "status": "maintained",
+  "priority": 1,
+  "tags": [
+    "explainable-ai",
+    "brain-tumor-classification",
+    "medical-imaging",
+    "grad-cam",
+    "pytorch",
+    "react",
+    "privacy-first"
+  ],
+  "techStack": [
+    "Python 3.10",
+    "PyTorch",
+    "Flask",
+    "OpenCV",
+    "React 18",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS"
+  ],
+  "type": "project",
+  "visibility": true
+}
