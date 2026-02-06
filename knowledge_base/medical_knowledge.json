@@ -1,0 +1,309 @@
+{
+  "brain_tumors": {
+    "overview": {
+      "definition": "A brain tumor is an abnormal growth of cells in the brain or surrounding tissues. Brain tumors can be benign (non-cancerous) or malignant (cancerous). They are classified as primary (originating in the brain) or secondary/metastatic (spreading from cancer elsewhere in the body).",
+      "description": "Brain tumors occur when abnormal cells form within the brain. These tumors can disrupt normal brain function by pressing on or invading healthy brain tissue. They vary widely in their aggressiveness, location, and treatability. Early detection and proper diagnosis are crucial for optimal treatment outcomes.",
+      "prevalence": "Brain tumors affect approximately 700,000 people in the United States. About 87,000 new cases are diagnosed annually, with roughly 25,000 being malignant. They can occur at any age but are more common in children and older adults.",
+      "types_overview": [
+        "Gliomas - tumors arising from glial cells (astrocytomas, oligodendrogliomas, glioblastoma)",
+        "Meningiomas - tumors of the meninges (protective brain coverings)",
+        "Pituitary tumors - growths in the pituitary gland affecting hormone production",
+        "Acoustic neuromas - benign tumors on the hearing/balance nerve",
+        "Medulloblastomas - malignant tumors common in children",
+        "Metastatic tumors - cancer that has spread from other parts of the body"
+      ],
+      "general_symptoms": [
+        "Headaches that are persistent or worsen over time",
+        "Seizures in someone without a history of seizures",
+        "Changes in vision, hearing, or speech",
+        "Balance or coordination problems",
+        "Cognitive changes (memory, concentration, personality)",
+        "Nausea and vomiting without other explanation",
+        "Weakness or numbness in limbs"
+      ],
+      "diagnosis_methods": [
+        "MRI (Magnetic Resonance Imaging) - most detailed brain imaging",
+        "CT scan - quick initial assessment",
+        "Biopsy - tissue sampling for definitive diagnosis",
+        "Neurological examination - testing reflexes, coordination, strength",
+        "PET scan - detecting metabolic activity"
+      ],
+      "treatment_overview": "Treatment depends on tumor type, location, size, and patient health. Options include surgery to remove the tumor, radiation therapy to destroy cancer cells, chemotherapy with drugs, targeted therapy, and supportive care. Many patients receive a combination of treatments.",
+      "when_to_seek_help": "Seek immediate medical attention if you experience sudden severe headaches, new onset seizures, vision changes, or progressive weakness. Early diagnosis significantly improves treatment outcomes for many brain tumor types."
+    },
+    "glioma": {
+      "overview": "Gliomas are tumors that arise from glial cells, which are supportive cells in the brain that surround and support neurons. They are the most common type of primary brain tumor, accounting for about 30% of all brain tumors and 80% of malignant brain tumors.",
+      "types": [
+        {
+          "name": "Astrocytoma",
+          "description": "Arises from astrocytes. Ranges from low-grade (Grade I-II) to high-grade (Grade III-IV). Glioblastoma (Grade IV) is the most aggressive form."
+        },
+        {
+          "name": "Oligodendroglioma",
+          "description": "Develops from oligodendrocytes. Generally slower growing than astrocytomas. Often responds well to treatment."
+        },
+        {
+          "name": "Ependymoma",
+          "description": "Arises from ependymal cells lining the ventricles. More common in children. Can block cerebrospinal fluid flow."
+        }
+      ],
+      "symptoms": [
+        "Persistent headaches, often worse in the morning",
+        "Seizures (may be the first symptom)",
+        "Cognitive changes including memory problems",
+        "Personality or behavioral changes",
+        "Nausea and vomiting",
+        "Vision problems",
+        "Speech difficulties",
+        "Motor weakness on one side of the body"
+      ],
+      "diagnosis": [
+        "MRI with and without contrast (gold standard)",
+        "CT scan for initial assessment",
+        "MR spectroscopy for metabolic analysis",
+        "Perfusion MRI to assess blood flow",
+        "PET scan to evaluate metabolic activity",
+        "Stereotactic biopsy for histological confirmation",
+        "Molecular testing (IDH mutation, 1p/19q codeletion, MGMT methylation)"
+      ],
+      "treatment": {
+        "surgery": "Maximum safe resection is the primary treatment goal. Complete removal improves survival but must balance against preserving neurological function.",
+        "radiation": "External beam radiation therapy (EBRT), stereotactic radiosurgery (SRS), or proton therapy. Often used post-surgery for high-grade tumors.",
+        "chemotherapy": "Temozolomide is standard for glioblastoma. PCV regimen (procarbazine, lomustine, vincristine) for oligodendrogliomas.",
+        "targeted_therapy": "Bevacizumab (Avastin) for recurrent glioblastoma. Clinical trials for IDH inhibitors.",
+        "tumor_treating_fields": "Optune device delivers alternating electric fields to disrupt cancer cell division."
+      },
+      "prognosis": {
+        "low_grade": "Median survival 5-10+ years with treatment. Many patients live for decades with proper management.",
+        "high_grade": "Glioblastoma median survival is 14-16 months with standard treatment. 5-year survival rate is approximately 5-10%.",
+        "factors": "Age, performance status, extent of resection, molecular markers (IDH mutation, MGMT methylation) significantly affect prognosis."
+      }
+    },
+    "meningioma": {
+      "overview": "Meningiomas arise from the meninges, the protective membranes surrounding the brain and spinal cord. They are the most common primary intracranial tumor, representing about 36% of all primary brain tumors. The vast majority (90%) are benign (WHO Grade I).",
+      "grades": [
+        {
+          "grade": "I (Benign)",
+          "percentage": "80-85%",
+          "description": "Slow-growing, well-defined borders. Rarely recur after complete removal."
+        },
+        {
+          "grade": "II (Atypical)",
+          "percentage": "10-15%",
+          "description": "Faster growing with higher recurrence risk. May invade brain tissue."
+        },
+        {
+          "grade": "III (Malignant/Anaplastic)",
+          "percentage": "1-3%",
+          "description": "Aggressive, invasive. High recurrence rate. May metastasize."
+        }
+      ],
+      "risk_factors": [
+        "Female sex (2:1 ratio, possibly hormone-related)",
+        "Prior radiation exposure, especially in childhood",
+        "Neurofibromatosis type 2 (NF2)",
+        "Age (incidence increases with age)",
+        "Obesity",
+        "Hormone replacement therapy (controversial)"
+      ],
+      "symptoms": [
+        "Headaches (most common)",
+        "Seizures",
+        "Vision changes or loss",
+        "Hearing loss or tinnitus",
+        "Memory problems",
+        "Weakness in limbs",
+        "Speech difficulties",
+        "Many are asymptomatic and found incidentally"
+      ],
+      "treatment": {
+        "observation": "Small, asymptomatic meningiomas may be monitored with regular MRI scans ('watchful waiting').",
+        "surgery": "Complete resection (Simpson Grade I) offers best outcomes. Extent of resection is key prognostic factor.",
+        "radiation": "Used for residual/recurrent tumors, surgically inaccessible locations, or atypical/malignant grades.",
+        "medical": "No standard chemotherapy. Hormonal therapy and targeted agents under investigation."
+      },
+      "prognosis": {
+        "grade_I": "Excellent prognosis. 10-year survival >90%. Low recurrence after complete resection.",
+        "grade_II": "5-year recurrence rate 40-50%. Requires closer monitoring.",
+        "grade_III": "Median survival 2-3 years. High recurrence rate despite treatment."
+      }
+    },
+    "pituitary": {
+      "overview": "Pituitary tumors (adenomas) arise from the pituitary gland at the base of the brain. They represent 10-15% of all intracranial tumors. The vast majority are benign adenomas. They can cause symptoms by hormone overproduction, hormone deficiency, or mass effect on surrounding structures.",
+      "classification": {
+        "by_size": [
+          {"name": "Microadenoma", "size": "<10mm", "description": "Often discovered incidentally or due to hormone effects"},
+          {"name": "Macroadenoma", "size": "≥10mm", "description": "More likely to cause mass effect symptoms"}
+        ],
+        "by_function": [
+          {"name": "Functioning/Secretory", "description": "Produce excess hormones (60-70% of pituitary tumors)"},
+          {"name": "Non-functioning", "description": "Do not produce hormones but cause symptoms by size (30-40%)"}
+        ]
+      },
+      "hormone_types": [
+        {
+          "type": "Prolactinoma",
+          "percentage": "40-50%",
+          "symptoms": "Galactorrhea, amenorrhea, infertility, decreased libido, erectile dysfunction"
+        },
+        {
+          "type": "Growth Hormone-Secreting",
+          "percentage": "15-20%",
+          "symptoms": "Acromegaly in adults (enlarged hands, feet, facial features), gigantism in children"
+        },
+        {
+          "type": "ACTH-Secreting",
+          "percentage": "10-15%",
+          "symptoms": "Cushing's disease - weight gain, moon face, buffalo hump, diabetes, hypertension"
+        },
+        {
+          "type": "TSH-Secreting",
+          "percentage": "<1%",
+          "symptoms": "Hyperthyroidism - weight loss, rapid heartbeat, anxiety"
+        }
+      ],
+      "visual_symptoms": "Compression of optic chiasm causes characteristic bitemporal hemianopia (loss of peripheral vision on both sides).",
+      "treatment": {
+        "medical": "Prolactinomas: dopamine agonists (cabergoline, bromocriptine) are first-line. GH adenomas: somatostatin analogs.",
+        "surgery": "Transsphenoidal surgery (through the nose) is standard. Transcranial approach for very large tumors.",
+        "radiation": "Used for residual/recurrent tumors. Stereotactic radiosurgery (Gamma Knife) increasingly used."
+      },
+      "prognosis": "Generally excellent. Most pituitary adenomas are benign with good surgical outcomes. Functional tumors may require lifelong hormone management."
+    },
+    "notumor": {
+      "overview": "A normal brain MRI shows no evidence of tumor, mass, or abnormal enhancement. The brain tissue appears with normal signal intensity, ventricles are of normal size and configuration, and there is no midline shift or mass effect.",
+      "normal_variants": [
+        "Perivascular spaces (Virchow-Robin spaces)",
+        "Pineal cysts",
+        "Arachnoid cysts",
+        "Mega cisterna magna",
+        "Cavum septum pellucidum"
+      ],
+      "follow_up": "If symptoms persist despite normal imaging, clinical correlation is essential. Consider repeat imaging in 3-6 months or alternative diagnoses.",
+      "differential": [
+        "Migraine or tension headache",
+        "Idiopathic intracranial hypertension",
+        "Multiple sclerosis (early)",
+        "Neurodegenerative conditions",
+        "Psychiatric conditions"
+      ]
+    }
+  },
+  "mri_imaging": {
+    "sequences": {
+      "T1": "Shows anatomy clearly. CSF appears dark. Fat appears bright. Tumors often appear dark/isointense.",
+      "T2": "CSF appears bright. Edema appears bright. Good for detecting pathology.",
+      "FLAIR": "Like T2 but suppresses CSF signal. Excellent for periventricular lesions and edema.",
+      "T1_contrast": "Gadolinium enhancement shows blood-brain barrier breakdown. Active tumors enhance.",
+      "DWI": "Diffusion-weighted imaging. Restricted diffusion in highly cellular tumors and acute stroke.",
+      "MR_Spectroscopy": "Shows metabolic profile. Elevated choline and reduced NAA suggest tumor."
+    },
+    "tumor_characteristics": {
+      "enhancement_pattern": {
+        "ring_enhancing": "Often seen in glioblastoma or metastases",
+        "homogeneous": "Typical of meningiomas",
+        "heterogeneous": "Variable, may indicate necrosis or hemorrhage",
+        "non_enhancing": "Low-grade gliomas often don't enhance"
+      },
+      "edema": {
+        "vasogenic": "Surrounding high-grade tumors, follows white matter tracts",
+        "cytotoxic": "Rarely seen with tumors, more common in stroke"
+      }
+    }
+  },
+  "model_interpretation": {
+    "grad_cam": {
+      "description": "Gradient-weighted Class Activation Mapping visualizes which regions of the image most influenced the model's decision.",
+      "interpretation": "Brighter/warmer colors indicate regions that contributed more strongly to the classification. The model 'looks at' these areas most heavily.",
+      "clinical_relevance": "If the highlighted region aligns with the actual tumor location, it increases confidence in the model's reasoning.",
+      "limitations": "Grad-CAM provides coarse localization. It shows correlation, not necessarily causation."
+    },
+    "integrated_gradients": {
+      "description": "Computes the contribution of each pixel by integrating gradients along a path from a baseline (black image) to the input.",
+      "interpretation": "Shows pixel-level importance. Positive values indicate pixels that pushed the prediction toward the predicted class.",
+      "advantages": "Satisfies theoretical axioms (sensitivity, implementation invariance). Provides finer-grained attribution than Grad-CAM."
+    },
+    "uncertainty": {
+      "epistemic": "Uncertainty due to limited knowledge/training data. Can be reduced with more data. High when image is unlike training distribution.",
+      "aleatoric": "Inherent noise in the data. Cannot be reduced by more training. High in ambiguous or low-quality images.",
+      "ensemble_disagreement": "When models in the ensemble predict differently, it indicates genuine ambiguity or difficulty in the case."
+    },
+    "confidence_calibration": {
+      "description": "Model confidence scores are calibrated using temperature scaling to better reflect true probability of correctness.",
+      "interpretation": "A calibrated 80% confidence means the model is correct approximately 80% of the time when it reports this confidence level."
+    }
+  },
+  "clinical_guidelines": {
+    "when_to_seek_care": [
+      "New or worsening headaches, especially with nausea/vomiting",
+      "Seizures (any new seizure in an adult requires evaluation)",
+      "Progressive weakness or numbness",
+      "Vision changes",
+      "Personality or cognitive changes",
+      "Balance or coordination problems"
+    ],
+    "imaging_recommendations": {
+      "suspected_tumor": "MRI brain with and without gadolinium contrast",
+      "follow_up": "Timing depends on tumor type and grade, typically every 3-12 months",
+      "post_treatment": "MRI within 24-72 hours post-surgery to assess residual tumor"
+    },
+    "multidisciplinary_team": [
+      "Neuro-oncologist",
+      "Neurosurgeon",
+      "Radiation oncologist",
+      "Neuroradiologist",
+      "Neuropathologist",
+      "Neurologist",
+      "Supportive care team (physical therapy, occupational therapy, speech therapy)"
+    ]
+  },
+  "ai_model_information": {
+    "architecture": {
+      "ensemble": "Weighted ensemble of three deep learning models for robust predictions",
+      "models": [
+        {"name": "EfficientNet-B3", "weight": 0.40, "description": "Efficient architecture with compound scaling. Best individual performer."},
+        {"name": "ResNet-50", "weight": 0.35, "description": "Deep residual network with skip connections. Strong feature extraction."},
+        {"name": "DenseNet-121", "weight": 0.25, "description": "Dense connections between layers. Good gradient flow."}
+      ]
+    },
+    "training": {
+      "dataset": "Trained on brain MRI dataset with four classes: glioma, meningioma, pituitary tumor, and no tumor",
+      "augmentation": "Extensive data augmentation including rotation, flipping, scaling, and intensity variations",
+      "validation": "Validated using cross-validation with held-out test set for final evaluation"
+    },
+    "test_time_augmentation": {
+      "description": "At inference, multiple augmented versions of the input are classified and predictions are averaged",
+      "augmentations": "Horizontal flip, rotations (±15°), slight zoom variations",
+      "benefit": "Reduces prediction variance and improves robustness to image orientation"
+    },
+    "limitations": [
+      "Trained on specific MRI sequences and may not generalize to all protocols",
+      "Not validated for pediatric populations",
+      "Cannot detect very small tumors or early-stage disease",
+      "Should not be used as sole basis for clinical decisions",
+      "Performance may vary with image quality and acquisition parameters"
+    ]
+  },
+  "faq": [
+    {
+      "question": "How accurate is this AI model?",
+      "answer": "The ensemble model achieves approximately 95%+ accuracy on the validation dataset. However, real-world performance may vary depending on image quality and patient population. Always confirm findings with a qualified radiologist."
+    },
+    {
+      "question": "Can this AI replace a doctor?",
+      "answer": "No. This tool is designed to assist healthcare professionals, not replace them. It can help prioritize cases and provide a second opinion, but all clinical decisions should be made by qualified medical professionals."
+    },
+    {
+      "question": "What should I do if the AI detects a tumor?",
+      "answer": "If you're a patient, consult with your healthcare provider immediately. If you're a healthcare professional, correlate the AI findings with clinical presentation and consider additional imaging or biopsy as appropriate."
+    },
+    {
+      "question": "Why does the model show uncertainty?",
+      "answer": "Uncertainty can arise from ambiguous image features, poor image quality, unusual presentations, or cases that don't clearly fit the training distribution. High uncertainty cases warrant additional expert review."
+    },
+    {
+      "question": "What do the different visualization methods show?",
+      "answer": "Grad-CAM shows coarse regions of importance. Integrated Gradients provides pixel-level attribution. Saliency maps show sensitivity to input changes. Together, they provide complementary views of model reasoning."
+    }
+  ]
+}

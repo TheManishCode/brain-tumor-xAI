@@ -1,0 +1,18 @@
+[project]
+name = "midlens"
+version = "2.0.0"
+description = "AI-powered brain tumor classification from MRI scans"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["server"]

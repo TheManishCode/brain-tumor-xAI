@@ -1,0 +1,371 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  * {
+    @apply border-dark-700;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark-950 text-dark-100 font-sans;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-dark-950;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    :root {
+      --contrast-multiplier: 1.2;
+    }
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-primary-600 text-white;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-dark-500;
+  }
+}
+
+/* Component utilities */
+@layer components {
+  /* Card styles */
+  .card {
+    @apply bg-dark-900/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-300 hover:border-primary-500/30 hover:shadow-glow;
+  }
+
+  /* Button base styles */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-xl
+           transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-950;
+  }
+
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-primary-600 to-primary-500 text-white
+           hover:from-primary-500 hover:to-primary-400 hover:shadow-glow
+           active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply btn bg-dark-800 text-dark-100 border border-dark-600
+           hover:bg-dark-700 hover:border-dark-500
+           active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-dark-300
+           hover:bg-dark-800 hover:text-dark-100;
+  }
+
+  /* Input styles */
+  .input {
+    @apply w-full px-4 py-3 bg-dark-800 border border-dark-600 rounded-xl
+           text-dark-100 placeholder:text-dark-500
+           focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20
+           transition-all duration-200;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-500/10 text-primary-400 border border-primary-500/20;
+  }
+
+  .badge-success {
+    @apply badge bg-medical-green/10 text-medical-green border border-medical-green/20;
+  }
+
+  .badge-warning {
+    @apply badge bg-medical-yellow/10 text-medical-yellow border border-medical-yellow/20;
+  }
+
+  .badge-danger {
+    @apply badge bg-medical-red/10 text-medical-red border border-medical-red/20;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 via-primary-300 to-primary-500 bg-clip-text text-transparent;
+  }
+
+  /* Section container */
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Glass effect */
+  .glass {
+    @apply bg-dark-900/30 backdrop-blur-xl border border-dark-700/50;
+  }
+
+  /* Skeleton loading */
+  .skeleton {
+    @apply bg-dark-700 animate-pulse rounded;
+  }
+
+  /* Accessibility: Screen reader only */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  /* Focus trap indicator */
+  .focus-trap-active {
+    @apply ring-2 ring-primary-500 ring-offset-2 ring-offset-dark-950;
+  }
+}
+
+/* =============================================================================
+   ACCESSIBILITY STYLES - WCAG 2.1 AA COMPLIANT
+   ============================================================================= */
+
+/* Reduced Motion Mode (WCAG 2.3.3) */
+.reduce-motion,
+.reduce-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* High Contrast Mode (WCAG 1.4.3, 1.4.6) */
+.high-contrast {
+  --bg-primary: #000000;
+  --text-primary: #ffffff;
+  --border-primary: #ffffff;
+}
+
+.high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .card,
+.high-contrast .bg-dark-900,
+.high-contrast .bg-dark-800,
+.high-contrast .bg-dark-950 {
+  background-color: #000000 !important;
+  border-color: #ffffff !important;
+  border-width: 2px;
+}
+
+.high-contrast .text-dark-400,
+.high-contrast .text-dark-300,
+.high-contrast .text-dark-500 {
+  color: #ffffff !important;
+}
+
+.high-contrast .text-primary-400,
+.high-contrast .text-primary-500 {
+  color: #a5b4fc !important;
+}
+
+.high-contrast button,
+.high-contrast a {
+  border: 2px solid currentColor !important;
+}
+
+.high-contrast .btn-primary {
+  background: #4f46e5 !important;
+  border: 3px solid #ffffff !important;
+}
+
+.high-contrast img {
+  filter: contrast(1.1);
+}
+
+/* Enhanced Focus Mode (WCAG 2.4.7) */
+.enhanced-focus *:focus-visible {
+  outline: 3px solid #4f46e5 !important;
+  outline-offset: 4px !important;
+  box-shadow: 0 0 0 6px rgba(79, 70, 229, 0.3) !important;
+}
+
+.enhanced-focus button:focus-visible,
+.enhanced-focus a:focus-visible,
+.enhanced-focus input:focus-visible,
+.enhanced-focus select:focus-visible,
+.enhanced-focus textarea:focus-visible {
+  outline: 3px solid #4f46e5 !important;
+  outline-offset: 4px !important;
+}
+
+/* Large Text Mode (WCAG 1.4.4) */
+.large-text {
+  font-size: 125%;
+}
+
+.large-text h1 { font-size: 2.5rem; }
+.large-text h2 { font-size: 2rem; }
+.large-text h3 { font-size: 1.75rem; }
+.large-text p, .large-text li { font-size: 1.125rem; }
+
+/* Screen Reader Optimizations */
+[data-sr-mode="true"] .decorative {
+  display: none;
+}
+
+[data-sr-mode="true"] [aria-hidden="true"] {
+  visibility: hidden;
+}
+
+/* Skip Link (WCAG 2.4.1) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 1rem 2rem;
+  background: #4f46e5;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+/* Utility classes */
+@layer utilities {
+  /* Animated gradient background */
+  .animated-gradient {
+    background: linear-gradient(-45deg, #4f46e5, #7c3aed, #6366f1, #818cf8);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Grid pattern background */
+  .bg-grid-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234f46e5' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Text balance for better typography */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* Glow effect */
+  .glow {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+
+  .glow-lg {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+  }
+
+  /* Clip path utilities */
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+}
+
+/* Accessibility: High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  .card {
+    @apply border-dark-500;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 border-2 border-primary-400;
+  }
+
+  .text-dark-400 {
+    @apply text-dark-200;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    @apply bg-white text-black;
+  }
+
+  .card {
+    @apply border-gray-300 bg-white;
+  }
+}
