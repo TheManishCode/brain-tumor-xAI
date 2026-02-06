@@ -25,6 +25,29 @@ MidLens is a full-stack application that classifies brain MRI scans into four ca
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/home.png" alt="Home Page — Hero section with model stats" width="100%" />
+</p>
+<p align="center"><em>Home — Brain Tumor Classification hero with live ensemble stats</em></p>
+
+<br />
+
+<p align="center">
+  <img src="screenshots/xai-analysis.png" alt="XAI Analysis — Grad-CAM attention heatmap and overlay" width="100%" />
+</p>
+<p align="center"><em>Analyze — Grad-CAM attention heatmap with regional importance breakdown</em></p>
+
+<br />
+
+<p align="center">
+  <img src="screenshots/models.png" alt="Models Page — Ensemble model cards with accuracy and F1 scores" width="100%" />
+</p>
+<p align="center"><em>Models — EfficientNet-B3, ResNet-50, and DenseNet-121 ensemble details</em></p>
+
+---
+
 ## Features
 
 | Feature | Description |
